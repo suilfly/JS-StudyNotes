@@ -1,5 +1,3 @@
-
-```javascript
 var express = require('express'),
     socket = require('socket.io');
 // App的设置
@@ -25,5 +23,3 @@ io.on('connection',function(socket){
         console.log(data);
     });
 });
-
-```
