@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片懒加载&图片预加载</title>
+</head>
+
+<body>
+    <script src="./Object.js"></script>
+    <!-- 图片列表的容器 -->
+    <div class="wrapper">
+        <ul class="img-list J_imgList"></ul>
+    </div>
+    <!-- 先把图片的信息列表放到数组中 -->
+    <div style="display: none;" id="J_data">
+        [
+        {"img": "./images/1.jpg", "name": "图片1"},
+        {"img": "./images/1.jpg", "name": "图片2"},
+        {"img": "./images/1.jpg", "name": "图片3"},
+        {"img": "./images/1.jpg", "name": "图片4"},
+        {"img": "./images/1.jpg", "name": "图片5"},
+        {"img": "./images/1.jpg", "name": "图片6"},
+        {"img": "./images/1.jpg", "name": "图片7"},
+        {"img": "./images/1.jpg", "name": "图片8"},
+        {"img": "./images/1.jpg", "name": "图片9"},
+        {"img": "./images/1.jpg", "name": "图片10"},
+        ]
+    </div>
+
+    <script type="text/html" id="J_imgTpl">
+        <li class="img-item">
+            <div class="img-wrap">
+                <img src="./images/bg.png" class="list-img" alt="{{name}}" data-src="{{img}}">
+            </div>
+            <div class="img-tt">
+                <h5>{{name}}</h5>
+            </div>
+        </li>
+    </script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
