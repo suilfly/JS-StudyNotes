@@ -38,9 +38,9 @@ const imgData = [
 
   // 监听滚动事件，绑定事件
   function bindEvent() {
-    const wrapper = document.getElementsByClassName('.wrapper')
+    const wrapper = document.querySelector('.wrapper')
     wrapper.addEventListener('scroll', (e) => {
-      console.log(e.scrollTop)
+      console.log(e)
     })
   }
 
