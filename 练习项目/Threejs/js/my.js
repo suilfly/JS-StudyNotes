@@ -8,25 +8,33 @@ const renderer = new THREE.WebGLRenderer()
 renderer.setSize(window.innerWidth, window.innerHeight)
 // 一个canvas元素
 document.body.appendChild(renderer.domElement)
+// 网格
+// const geometry = new THREE.BoxGeometry(1, 1, 1)
+// 创建基础材质
+// const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 })
+// 几何立方体
+// const cube = new THREE.Mesh(geometry, material)
 
-const geometry = new THREE.BoxGeometry(1, 1, 1)
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 })
+// 线条的基本材质
+/* const material = new THREE.LineBasicMaterial({ color: 0x0000ff }) */
+// 放置顶点
+/* const points = [new THREE.Vector3(- 10, 0, 0), new THREE.Vector3(0, 10, 0), new THREE.Vector3(10, 0, 0)]
+const geometry = new THREE.BufferGeometry().setFromPoints(points)
+const line = new THREE.Line(geometry, material) */
 
-const cube = new THREE.Mesh(geometry, material)
 // 默认的放置坐标（0，0，0）这样摄像机和立方体会在一起
-scene.add(cube)
-camera.position.z = 5
+// scene.add(cube)
+/* scene.add(line)
+camera.position.set(0, 0, 105)
+camera.lookAt(0, 0, 0) */
 
 // 渲染场景
 function animate() {
     requestAnimationFrame(animate)
-    cube.position.x += 0.01
-    cube.position.y += 0.01
+
     renderer.render(scene, camera)
 }
 
+
+
 animate()
-/* function testAnimation() {
-    console.log(111)
-}
-requestAnimationFrame(testAnimation) */
